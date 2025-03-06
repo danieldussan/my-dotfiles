@@ -1,0 +1,68 @@
+# This is the configuration file for LazyGit. It has a very simple format: key-value pairs
+# separated by colons. Groups of settings are marked by [header] and delimited by an empty line.
+# Comments start with # and go to the end of the line.
+# THEME MAGENTA
+# gui:
+#   theme:
+#     activeBorderColor:
+#       - "#B75BBF" # Magenta más oscuro para el borde activo
+#       - bold
+#     inactiveBorderColor:
+#       - "#5b4996" # Lila oscuro para borde inactivo
+#     selectedLineBgColor:
+#       - "#121822" # Azul oscuro para la línea seleccionada
+#     selectedRangeBgColor:
+#       - "#0D1116" # Casi negro, más sutil para selección de rango
+#     optionsTextColor:
+#       - "#B75BBF" # Magenta más oscuro para texto de opciones
+#     borderColor:
+#       - "#5b4996" # Lila oscuro para bordes generales
+#     tableHeaderFgColor:
+#       - "#B75BBF" # Magenta más oscuro para encabezado de tablas
+#     searchHighlightColor:
+#       - "#6E4D91" # Púrpura suave para resaltado de búsqueda
+#     unstagedChangesColor:
+#       - "#B75BBF" # Magenta más oscuro para cambios no guardados
+#     defaultFgColor:
+#       - "#C0A9D9" # Lila más claro para texto general
+#     diffAddColor:
+#       - "#4E8C6E" # Verde apagado para líneas añadidas
+#     diffRemoveColor:
+#       - "#C1476F" # Rojo apagado para líneas eliminadas
+#     commitTextColor:
+#       - "#D6C5E0" # Lila claro para commits
+#     cherryPickedCommitBgColor:
+#       - "#1E1B29" # Púrpura oscuro para fondo de cherry-pick
+# THEME BLUE
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#3D91D9" # Azul más vibrante para el borde activo
+      - bold
+    inactiveBorderColor:
+      - "#5b4996" # Lila oscuro para borde inactivo
+    selectedLineBgColor:
+      - "#0F1A2E" # Azul oscuro profundo para la línea seleccionada
+    selectedRangeBgColor:
+      - "#0D1116" # Casi negro, más sutil para selección de rango
+    optionsTextColor:
+      - "#3D91D9" # Azul más vibrante para texto de opciones
+    borderColor:
+      - "#5b4996" # Lila oscuro para bordes generales
+    tableHeaderFgColor:
+      - "#3D91D9" # Azul más vibrante para encabezado de tablas
+    searchHighlightColor:
+      - "#2C74B3" # Azul intenso para resaltado de búsqueda
+    unstagedChangesColor:
+      - "#3D91D9" # Azul más vibrante para cambios no guardados
+    defaultFgColor:
+      - "#B0CFF5" # Azul claro para texto general
+    diffAddColor:
+      - "#4E8C6E" # Verde apagado para líneas añadidas
+    diffRemoveColor:
+      - "#C1476F" # Rojo apagado para líneas eliminadas
+    commitTextColor:
+      - "#D6C5E0" # Lila claro para commits
+    cherryPickedCommitBgColor:
+      - "#1E1B29" # Púrpura oscuro para fondo de cherry-pick

@@ -1,0 +1,6 @@
+reset xterm && export SHELL=bash && export TERM=xterm
+nmap -p- --open -sS --min-rate 5000 -n -Pn -vvv [ip] -oG allPorts
+nmap -p[puertos] -sCV [ip] -oN targeted 
+systemctl --user restart pipewire pipewire-pulse
+danieldussan@plentycode.com
+daniel2014dussan@gmail.com
