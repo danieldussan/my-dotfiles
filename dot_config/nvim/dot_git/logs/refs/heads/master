@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 a7266e3e7312c89fd123af1388aea391bace64de Daniel Dussan <daniel2014dussan@gmail.com> 1738728886 -0500	commit (initial): Sync config
+a7266e3e7312c89fd123af1388aea391bace64de cbdf5ef9871ba8207b2ad301b313383804aef7dc Daniel Dussan <daniel2014dussan@gmail.com> 1738729267 -0500	rebase (finish): refs/heads/master onto b9b65954e7064bd6a166f7f55c3e4fd8096bf7de
+cbdf5ef9871ba8207b2ad301b313383804aef7dc ce652d75615660b594c9e0352bdd5193df043093 Daniel Dussan <daniel2014dussan@gmail.com> 1738815974 -0500	commit: Added codeium source for blink, unistalling vim be good
+ce652d75615660b594c9e0352bdd5193df043093 410957474d49344c5d750669358766e41456edb4 Daniel Dussan <daniel2014dussan@gmail.com> 1738884144 -0500	commit: Added more format colors
+410957474d49344c5d750669358766e41456edb4 5a18141bb82d3b15a590f4e12230aa80e739a2b1 Daniel Dussan <daniel2014dussan@gmail.com> 1739073077 -0500	commit: Updated snacks explorer config, added new keymap and updated colorscheme
+5a18141bb82d3b15a590f4e12230aa80e739a2b1 cd511270724b972ebc1c00e455465dc13bbd8d6a Daniel Dussan <daniel2014dussan@gmail.com> 1739238384 -0500	commit: Removed duplicated plugin
+cd511270724b972ebc1c00e455465dc13bbd8d6a 80e65f5fabff90fd813ff365726edea7d268fed6 Daniel Dussan <daniel2014dussan@gmail.com> 1739666098 -0500	commit: Added sudo support and selector for python virtual environments, Fixed Blink after update
+80e65f5fabff90fd813ff365726edea7d268fed6 2062ddf3469cd338019e7798bfaae82f20069bd3 Daniel Dussan <daniel2014dussan@gmail.com> 1739978808 -0500	commit: Added avante chat and fixed blink score_offset
+2062ddf3469cd338019e7798bfaae82f20069bd3 5f8edeab93b391bed3a1c6855ec4681b80679d0f Daniel Dussan <daniel2014dussan@gmail.com> 1739989578 -0500	commit: Removed unused color and unused plugin
+5f8edeab93b391bed3a1c6855ec4681b80679d0f 7a8eda085785d063928e726d926403b24c8a5810 Daniel Dussan <daniel2014dussan@gmail.com> 1740497592 -0500	commit: Minimal changes and removed unused plugins
+7a8eda085785d063928e726d926403b24c8a5810 2bda31a53e3e391865eb3b9be72ff13415792c12 Daniel Dussan <daniel2014dussan@gmail.com> 1740524352 -0500	commit: Optimized init time
+2bda31a53e3e391865eb3b9be72ff13415792c12 5fb93c9098742496aa22368f5f48a68314311e91 Daniel Dussan <daniel2014dussan@gmail.com> 1740537384 -0500	commit: Added lorem plugin
+5fb93c9098742496aa22368f5f48a68314311e91 9ce635b865bc755881b6b5770adb999fca07c09e Daniel Dussan <daniel2014dussan@gmail.com> 1741127641 -0500	commit: Update blink config and delete venv selector, telescope
