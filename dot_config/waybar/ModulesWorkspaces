@@ -172,6 +172,7 @@
 		"class<org.telegram.desktop|io.github.tdesktop_x64.TDesktop>": " ",
 		"class<[Ss]potify>": " ",
 		"class<Code|code>": "󰨞 ",
+		"class<windsurf-url-handler>": " ",
 		"class<thunar>": "󰝰 ", 
     "class<Slack>": " ",
     "class<virtualbox|VirtualBox|VirtualBoxVM|VirtualBox Manager>": " ",

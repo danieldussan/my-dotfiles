@@ -49,6 +49,7 @@ return {
               { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
               { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
               { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+              { icon = " ", key = "e", desc = "Tree Explorer", action = ":lua Snacks.explorer()" },
               { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
               { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
               { icon = " ", key = "s", desc = "Restore Session", section = "session" },
@@ -269,6 +270,9 @@ return {
             auto_close = true,
             jump = { close = false },
             layout = { preset = "default", preview = true },
+          },
+          files = {
+            exclude = { "node_modules", ".git", "build", "dist", "venv", "__pycache__" },
           },
         },
         -- In case you want to make sure that the score manipulation above works

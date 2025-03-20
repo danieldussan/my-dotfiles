@@ -1,0 +1,7 @@
+{
+  "TODO": {
+    "prefix": "TODO",
+    "body": "$BLOCK_COMMENT_START TODO: ${1:description} $BLOCK_COMMENT_END",
+    "description": "Add TODO comment"
+  }
+}

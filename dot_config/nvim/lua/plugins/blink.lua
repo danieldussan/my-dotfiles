@@ -13,7 +13,6 @@
 
 -- NOTE: Specify the trigger character(s) used for luasnip
 local trigger_text = ";"
-local icons = require("lib.icons")
 
 return {
   {
@@ -47,27 +46,7 @@ return {
       -- NOTE: by default lazyvim already includes the lazydev source, so not adding it here again
       opts.sources = vim.tbl_deep_extend("force", opts.sources or {}, {
         default = { "lsp", "path", "snippets", "buffer", "emoji", "dictionary", "lazydev" },
-        compat = { "supermaven", "codeium" },
         providers = {
-          supermaven = {
-            kind = "Supermaven",
-            score_offset = 25,
-            async = false,
-          },
-          codeium = {
-            kind = "Codeium",
-            score_offset = 25,
-            async = false,
-            enabled = function()
-              -- Get the current buffer's filetype
-              local filetype = vim.bo[0].filetype
-              -- Disable for Telescope buffers
-              if filetype == "oil" then
-                return false
-              end
-              return true
-            end,
-          },
           lsp = {
             name = "lsp",
             enabled = true,
@@ -206,6 +185,20 @@ return {
         },
       })
       opts.cmdline = {
+        completion = {
+          menu = { auto_show = true },
+          list = {
+            selection = {
+              preselect = false,
+              auto_insert = false,
+            },
+          },
+        },
+        keymap = {
+          ["<CR>"] = { "accept_and_enter", "fallback" },
+          ["<Up>"] = { "select_prev", "fallback" },
+          ["<Down>"] = { "select_next", "fallback" },
+        },
         sources = function()
           local type = vim.fn.getcmdtype()
           -- Search forward and backward
@@ -232,6 +225,9 @@ return {
             columns = {
               { "label", "label_description", gap = 1 },
               { "kind_icon", "kind" },
+            },
+            treesitter = {
+              "lsp",
             },
           },
         },
@@ -305,14 +301,5 @@ return {
 
       return opts
     end,
-  },
-  {
-    "saghen/blink.compat",
-    -- use the latest release, via version = '*', if you also use the latest release for blink.cmp
-    version = "*",
-    -- lazy.nvim will automatically load the plugin when it's required by blink.cmp
-    lazy = true,
-    -- make sure to set opts so that lazy.nvim calls blink.compat's setup
-    opts = {},
   },
 }
