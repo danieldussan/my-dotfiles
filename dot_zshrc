@@ -84,10 +84,8 @@ alias lg="lazygit"
 alias lzd="lazydocker"
 alias cat="bat"
 alias kwork="kitty @ launch --type=tab --cwd=~/Work/pc-lasoh-host-portal; kitty @ launch --type=tab --cwd=~/Work/pc-lasoh-guest-portal"
+alias act="source venv/bin/activate"
 
-################## TEMP ALIASES ##################
-alias wwg='cd /home/ddussan/Work/pc-lasoh-guest-portal'
-alias wwh='cd /home/ddussan/Work/pc-lasoh-host-portal'
 ################## CUSTOM FUNCTIONS ##################
 
 function extractPorts(){
@@ -100,8 +98,6 @@ function extractPorts(){
     echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
     cat extractPorts.tmp; rm extractPorts.tmp
 }
-
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -127,3 +123,11 @@ function yz() {
 
 ####### ZOXIDE SETUP #######
 eval "$(zoxide init zsh)"
+export PATH="/usr/bin:$PATH"
+
+# bun completions
+[ -s "/home/ddussan/.bun/_bun" ] && source "/home/ddussan/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
