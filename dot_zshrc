@@ -47,7 +47,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # ===== FZF Configuration =====
 # Initialize FZF
-eval "$(fzf --zsh)"
+source <(fzf --zsh)
 
 # General file search (includes hidden files, excludes .git)
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
