@@ -29,9 +29,11 @@ return {
     -- URL: https://github.com/akinsho/bufferline.nvim
     -- Description: A snazzy buffer line (with tabpage integration) for Neovim.
     "akinsho/bufferline.nvim",
+    lazy = true,
   },
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
+    lazy = true,
   },
   {
     "folke/ts-comments.nvim",
@@ -87,33 +89,6 @@ return {
     },
   },
 
-  -- Plugin: lualine.nvim
-  -- URL: https://github.com/nvim-lualine/lualine.nvim
-  -- Description: A blazing fast and easy to configure Neovim statusline plugin.
-
-  {
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy", -- Load this plugin on the 'VeryLazy' event
-    requires = { "nvim-tree/nvim-web-devicons", opt = true }, -- Optional dependency for icons
-    opts = {
-      options = {
-        theme = "onedark", -- Set the theme for lualine
-        icons_enabled = true, -- Enable icons in the statusline
-        component_separators = "",
-        disabled_filetypes = { "dashboard" },
-      },
-      sections = {
-        lualine_a = { { "mode", icon = "" } },
-
-        lualine_x = {
-          "filetype",
-          "filesize",
-        },
-        lualine_y = { "progress" },
-        lualine_z = { "location" },
-      },
-    },
-  },
   -- Plugin: incline.nvim
   -- URL: https://github.com/b0o/incline.nvim
   -- Description: A Neovim plugin for showing the current filename in a floating window.
@@ -128,13 +103,21 @@ return {
           cursorline = true, -- Hide the incline window when the cursorline is active
         },
         render = function(props)
-          local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t") -- Get the filename
-          if vim.bo[props.buf].modified then
-            filename = "[+] " .. filename -- Indicate if the file is modified
+          local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+          local isModified = vim.bo[props.buf].modified -- Indicate if the file is modified
+          if isModified then
+            filename = "[+] " .. filename
           end
 
+          local colorFilename = isModified and "#edce32" or "#f1f1f0"
           local icon, color = require("nvim-web-devicons").get_icon_color(filename) -- Get the icon and color for the file
-          return { { icon, guifg = color }, { " " }, { filename } } -- Return the rendered content
+
+          -- Return the rendered content
+          return {
+            { icon, guifg = color },
+            { " " },
+            { filename, guifg = colorFilename },
+          }
         end,
       })
     end,
