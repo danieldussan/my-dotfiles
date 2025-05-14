@@ -126,7 +126,7 @@
 },
 
 "custom/power": {
-	"format": "⏻ ",
+	"format": "⏻",
 	"on-click": "$HOME/.config/hypr/scripts/Wlogout.sh",
 	"on-click-right": "$HOME/.config/hypr/scripts/ChangeBlur.sh",
 	"tooltip": true,
@@ -182,6 +182,11 @@
 },
 "custom/separator#blank": {
 	"format": "",
+	"interval": "once",
+	"tooltip": false
+},
+"custom/separator#blank_1": {
+	"format": "  ",
 	"interval": "once",
 	"tooltip": false
 },

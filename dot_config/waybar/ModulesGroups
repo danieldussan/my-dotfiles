@@ -5,13 +5,36 @@
 
 {
 // GROUPS
+"group/system": {
+  "orientation": "horizontal",
+  "modules": [
+    "cpu",
+    "memory",
+    "disk",
+  ]
+},
+"group/others": {
+  "orientation": "horizontal",
+  "modules": [
+    "clock",
+    "custom/swaync",
+  ]
+},
+"group/apps": {
+  "orientation": "horizontal",
+  "modules": [
+    "group/wifi",
+    "tray",
+  ]
+},
+
 "group/app_drawer": {
 	"orientation": "inherit",
 	"drawer": {
 		"transition-duration": 500,
 		"children-class": "custom/menu",
 		"transition-left-to-right": true
-        },
+    },
 	"modules": [
 		"custom/menu",
 		"custom/light_dark",
@@ -50,20 +73,29 @@
 "group/laptop": {
 	"orientation": "inherit",
 	"modules": [
-		"backlight",
+    "temperature",
 		"battery",
+		"power-profiles-daemon",
 	]
 },
 "group/audio": {
+	"orientation": "horizontal",
+	"modules": [
+    "mpris",
+		"pulseaudio",
+		"pulseaudio#microphone",
+	]
+},
+
+"group/wifi": {
 	"orientation": "inherit",
 	"drawer": {
 		"transition-duration": 500,
-		"children-class": "pulseaudio",
-		"transition-left-to-right": true
+		"transition-left-to-right": false
         },
 	"modules": [
-		"pulseaudio",
-		"pulseaudio#microphone",
+		"network",
+    "network#speed",
 	]
 },
 
@@ -89,7 +121,6 @@
         },
 	"modules": [
 		"custom/power",
-		"custom/lock",
 		"keyboard-state",
 		"custom/keyboard",
 	]
